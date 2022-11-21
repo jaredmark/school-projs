@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+	font-family: Lato;
+}
+
+body {
+	background-image: url('https://img.freepik.com/premium-vector/abstract-gray-white-geometric-hexagons-background_78474-287.jpg?w=2000');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	min-width: 600px;
+}
+
+.titleContainer {
+	display: flex;
+	background-color: black;
+	padding: 0px 20px;
+	background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-texture-geometric-black-metal-gradient-image_17809.jpg')
+}
+
+.title {
+	font-family: Oswald;
+	color: white;
+	font-size: 36px;
+	padding: 0px 3px;
+}
+
+.titleEndHalf {
+	background-color: #ff2b36;
+	border-radius: 10px;
+	color: black;		
+}
+
+.line {
+	background-image: radial-gradient(white, black);
+	width: 4px;
+	height: 50px;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 24px;
+}
+
+.titleSubheader {
+	margin-left: 24px; 
+	color: white; 
+	font-family: Oswald; 
+	font-size: 30px;
+}
+
+.textBox {
+	margin: 16px 20px;
+	height: 24px;
+	width: 256px;
+	font-size: 16px;
+}
+
+.searchButton {
+	height: 30px;
+	width: 80px;
+	font-size: 16px;
+	text-align: center;
+	padding-bottom: 2px;
+	text-transform: uppercase;
+	background-color: #ff2b36;
+	color: black;
+	border-width: 1px; 
+	border-radius: 8px;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 50%;
+}
+
+.centerTextDiv{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 75%;
+}
+
+.statsContainer {
+	display: flex;
+}
+
+.thumbnail {
+	box-shadow: 16px 16px 6px #ff2b36;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.videoTitle {
+	font-family: Oswald;
+	font-size: 24px;
+}
+
+.statsDigit{
+	font-weight: bold;
+	color: #734b00;
+}
+
+.resultText {
+	margin: 0px 20px;
+}
+
+.videoContainer {
+	margin: 36px 0px;
+}
+
+#body {
+	margin-bottom: 36px;
+}

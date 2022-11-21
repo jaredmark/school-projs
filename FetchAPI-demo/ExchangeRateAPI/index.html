@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+	<p>Get Philippine Peso Conversion</p>
+	<label for = "textBox">PHP</label>
+	<input id = "textBox" type = "number"></input>
+	<button onclick = "getConversion()">Get Conversion</button>
+	<p id = "paragraph"></p>
+</body>
+<script>
+	let mainCurrencies = ['usd', 'eur', 'jpy', 'aud', 'btc', 'sgd']
+	let currencyCodeMeaning = {
+		'usd' : 'US Dollar',
+		'eur' : 'Euro',
+		'jpy' : 'Japanese Yen',
+		'aud' : 'Australian Dollar',
+		'btc' : 'bitcoin',
+		'krw' : 'South Korean Won',
+		'sgd' : 'Singaporean Dollar'
+	}
+	let textBox = document.getElementById('textBox')
+	textBox.defaultValue = "0"
+	let p = document.getElementById('paragraph')
+
+	function getConversion(){
+		fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json')
+		.then(data => data.json())
+		.then((data) => {
+			console.log(data)
+			
+			let amount = parseFloat(textBox.value).toFixed(2)
+			p.innerHTML = "<br><p>Conversion as of " + data.date + "</p>"
+			
+			for (currencyCode of mainCurrencies){
+				let converted = (amount * data.php[currencyCode]).toFixed(2)
+				p.innerHTML += '<p>' + currencyCode.toUpperCase() + ': ' + converted.toString() + ' ' + currencyCodeMeaning[currencyCode] + '</p>'
+			}
+		})
+	}	
+	
+</script>
+</html>
